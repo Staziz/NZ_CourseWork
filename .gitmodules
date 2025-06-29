@@ -1,0 +1,3 @@
+[submodule "web_part"]
+	path = web_part
+	url = ./web_part/

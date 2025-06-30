@@ -50,7 +50,7 @@ def predict():
         # low probability - error 
         if max_prob.item() < CONFIDENCE_THRESHOLD:
             os.remove(temp_path)
-            return jsonify({"error": "low confidence", "max_prob": round(max_prob.item(), 3)}), 400
+            return jsonify({"error": "low confidence", "max_prob": round(max_prob.item(), 3)}), 200
 
         # return class if probability > threshold
         predicted_class = class_names[predicted_idx.item()]
